@@ -1,0 +1,31 @@
+body,h1,h2,h3,h4,h5,h6,p,dd{margin:0;}
+ul,ol,dl{margin:0;padding:0;list-style:none;}
+img{border:none;vertical-align:middle;}
+a{text-decoration:none;color:inherit;outline:none;}
+body{font:14px/1.5 'Microsoft Yahei',sans-serif;}
+
+/*tab-star*/
+.tabs{}
+.tabs > ol.tabs-bar{
+    display: flex;
+    border-bottom: 1px solid #333333;
+}
+.tabs > ol.tabs-bar >li{
+    padding: 4px 8px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+}
+.tabs >ol.tabs-bar >li:hover{
+    border-color: #999999;
+}
+.tabs >ol.tabs-bar >li.active{
+    border-color: blue;
+}
+.tabs >ol.tabs-content>li{
+    display: none;
+}
+.tabs >ol.tabs-content>li.active{
+    display: block;
+}
+
+/*tab-end*/
