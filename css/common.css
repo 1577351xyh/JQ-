@@ -29,3 +29,15 @@ body{font:14px/1.5 'Microsoft Yahei',sans-serif;}
 }
 
 /*tab-end*/
+
+/*suggestion-star*/
+.inputWrap{
+    display: inline-block;
+}
+.inputWrap .loading{
+    display: none;
+}
+.loading-star .loading{
+    display: block;
+}
+/*suggestion-end*/

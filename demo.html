@@ -8,10 +8,7 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link  rel="stylesheet" type="text/css" href="./css/common.css">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
         <title>Title</title>
-
-
     </head>
     <body>
     <div class="tabs">
@@ -27,12 +24,29 @@
             <li>内容3</li>
             <li>内容4</li>
         </ol>
-
     </div>
+    <!-- 自动补全-->
+    <input id="input">
+
+
     <script src="./js/jquery.2.14.js"></script>
     <script src="./js/common.js"></script>
     <script>
-        let i = new Tabs('.tabs')
+        let i = new Tabs('.tabs');
+        let input = new Suggestion({
+            input:'#input',
+            search:function (value,callback) {
+                let array = [];
+                let n = parseInt(Math.random()*100,10);
+                for(let i =0; i<5; i++){
+                    array.push(value+n)
+                }
+                setTimeout(()=>{
+                    callback(array);
+                },1000)
+            },
+            loadingTemplate:'加载中'
+        })
     </script>
     </body>
 </html>
