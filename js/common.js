@@ -43,7 +43,6 @@ class Suggestion {
     bindEvent(){
         let timerid = null;
         this.$input.on('input',(e)=> {
-            console.log(e)
             if(timerid){
                 window.clearTimeout(timerid)
             }
